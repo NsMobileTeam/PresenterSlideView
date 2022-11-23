@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PresenterSlideView">
+        <attr name="orientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="loopItems" format="boolean" />
+        <attr name="autoScroll" format="boolean" />
+        <attr name="autoScrollDelay" format="integer" />
+        <attr name="dotVisibility">
+            <enum name="visible" value="0" />
+            <enum name="gone" value="8" />
+        </attr>
+        <attr name="dotSize" format="dimension" />
+        <attr name="dotMargin" format="dimension" />
+        <attr name="dotSelected" format="reference" />
+        <attr name="dotUnselected" format="reference" />
+    </declare-styleable>
+</resources>

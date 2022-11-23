@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.nextsense.presenterslideview.PresenterSlideView
+        android:id="@+id/psv_main_slide"
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        app:orientation="horizontal"
+        app:loopItems="true"
+        app:autoScroll="true"
+        app:autoScrollDelay="3000"
+        app:dotVisibility="visible"
+        app:dotSize="16dp"
+        app:dotMargin="2dp"
+        app:dotSelected="@drawable/full_dot"
+        app:dotUnselected="@drawable/empty_dot"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        android:orientation="horizontal">
+
+        <com.nextsense.presenterslideview.PresenterSlideView
+            android:id="@+id/psv_left_slide"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            app:orientation="vertical"
+            app:loopItems="true"
+            app:autoScroll="true"
+            app:autoScrollDelay="2400"
+            app:dotVisibility="gone"
+            app:dotSize="16dp"
+            app:dotMargin="2dp"/>
+
+        <com.nextsense.presenterslideview.PresenterSlideView
+            android:id="@+id/psv_right_slide"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            app:orientation="vertical"
+            app:loopItems="true"
+            app:autoScroll="true"
+            app:autoScrollDelay="1400"
+            app:dotVisibility="gone"
+            app:dotSize="16dp"
+            app:dotMargin="2dp"/>
+
+    </LinearLayout>
+
+    <com.nextsense.presenterslideview.PresenterSlideView
+        android:id="@+id/psv_manual_slide"
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        app:orientation="horizontal"
+        app:loopItems="false"
+        app:autoScroll="false"
+        app:autoScrollDelay="2000"
+        app:dotVisibility="visible"
+        app:dotSize="16dp"
+        app:dotMargin="2dp"/>
+
+</LinearLayout>
