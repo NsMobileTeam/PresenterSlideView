@@ -1,7 +1,7 @@
 # PresenterSlideView
 PresenterSlideView is a custom carousel view for android, the implementation is nearly identical to that of the RecyclerView as this view inherits from it. This view is intended to be used as an easier to implement LayoutPager with built in dots indicator (with swappable drawables) and is also optionally capable of autoscroll.
 
-![Sample Image](https://raw.githubusercontent.com/NsMobileTeam/PresenterSlideView/main/art_readme/sample.gif)
+<img src="https://raw.githubusercontent.com/NsMobileTeam/PresenterSlideView/main/art_readme/sample.gif" width=40%>
 
 ## Implementation
 [![](https://jitpack.io/v/NsMobileTeam/PresenterSlideView.svg)](https://jitpack.io/#NsMobileTeam/PresenterSlideView)
