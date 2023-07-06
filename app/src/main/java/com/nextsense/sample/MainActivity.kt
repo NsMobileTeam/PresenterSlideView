@@ -2,6 +2,8 @@ package com.nextsense.sample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import com.nextsense.presenterslideview.PresenterSlideView
 
 class MainActivity : AppCompatActivity() {
@@ -33,5 +35,9 @@ class MainActivity : AppCompatActivity() {
         manualSliderAdapter.setItems(manualItems)
         val manualSlider = findViewById<PresenterSlideView>(R.id.psv_manual_slide)
         manualSlider.setAdapter(manualSliderAdapter)
+        manualSlider.setSelected(3)
+        Handler(Looper.getMainLooper()).postDelayed({
+            manualSlider.previous()
+        }, 3000)
     }
 }

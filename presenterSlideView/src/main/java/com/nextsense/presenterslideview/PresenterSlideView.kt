@@ -20,6 +20,7 @@ import androidx.annotation.ColorInt
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
+import java.lang.Integer.max
 import java.util.*
 import kotlin.concurrent.schedule
 
@@ -153,6 +154,33 @@ class PresenterSlideView(private val parent: Context, private val attrs: Attribu
                         recyclerView.smoothScrollBy(0, height)
                     }
                 }
+            }
+        }
+    }
+
+    fun setSelected(i: Int) {
+        recyclerView.layoutManager?.scrollToPosition(max(i - 1, 0))
+    }
+
+    fun recyclerView(): RecyclerView {
+        return recyclerView
+    }
+
+    fun next() {
+        move(true)
+    }
+
+    fun previous() {
+        move(false)
+    }
+
+    private fun move(forward: Boolean) {
+        runOnUi {
+            val moveMod = if(forward) 1 else -1
+            if(orientation == RecyclerView.HORIZONTAL) {
+                recyclerView.smoothScrollBy(moveMod * width, 0)
+            } else {
+                recyclerView.smoothScrollBy(0, moveMod * height)
             }
         }
     }
